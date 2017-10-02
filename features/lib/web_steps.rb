@@ -1,8 +1,8 @@
 require 'capybara/cucumber'
-Capybara.default_driver = :selenium
+# Capybara.default_driver = :selenium
 
-Given(/^I am on the "([^"]*)"$/) do |page|
-  open_browser(page)
+Given(/^I am on the "([^"]*)"$/) do |site|
+  open_browser(site)
 end
 
 When(/^I click on "([^"]*)"$/) do |link|
@@ -10,6 +10,8 @@ When(/^I click on "([^"]*)"$/) do |link|
 end
 
 When(/^I get element "([^"]*)"$/) do |element|
-  get_element :xpath,element   # wait for element display on page
-  find(:xpath,element).text
+  msg = page.find(:xpath, element).value
+  # msg = find(get_element element).text()
+  puts msg
+  # find(:xpath,element).text
 end

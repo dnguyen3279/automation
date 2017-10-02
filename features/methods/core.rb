@@ -1,5 +1,5 @@
 require 'capybara/cucumber'
-Capybara.default_driver = :selenium
+# Capybara.default_driver = :selenium
 
 def open_browser url
   if url == ""
