@@ -11,8 +11,3 @@ def get_element element
   msg = "Xpath is " + element
   puts msg
 end
-
-
-
-
-
