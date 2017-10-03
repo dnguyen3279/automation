@@ -1,5 +1,4 @@
 require 'capybara/cucumber'
-# Capybara.default_driver = :selenium
 
 Given(/^I am on the "([^"]*)"$/) do |site|
   open_browser(site)
@@ -14,4 +13,8 @@ When(/^I get element "([^"]*)"$/) do |element|
   # msg = find(get_element element).text()
   puts msg
   # find(:xpath,element).text
+end
+
+Given /^I am on Login Page$/ do
+  open_browser($hash_var['Page Address'])
 end
