@@ -4,7 +4,7 @@ Given(/^I am on the "([^"]*)"$/) do |site|
   open_browser(site)
 end
 
-When(/^I click on "([^"]*)"$/) do |link|
+When /^I click on "([^\"]*)" link$/ do |link|
   click_link link
 end
 
@@ -21,4 +21,12 @@ end
 
 And /^I set text on "(.*?)" with "(.*?)"$/ do |object, text|
   execute_set_text(object, text)
+end
+
+And /^I click on "([^\"]*)"$/ do |object|
+  execute_click(object)
+end
+
+And /^I type to "(.*)" key is enter$/ do |object|
+  execute_sendkeys(object)
 end

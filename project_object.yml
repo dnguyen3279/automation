@@ -1,2 +1,0 @@
-google_button_search: .//*[@id='tsf']/div[2]/div[3]/center/input[1]
-button_search: .//*[@id='tsf']/div[2]
