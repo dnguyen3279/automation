@@ -1,8 +1,6 @@
-# require 'yaml'
-#
-# # def read_yml_file
-#   current_dir = File.expand_path(File.dirname(__FILE__))
-#   file_content = YAML::load_file("#{current_dir}/features/step_definitions/repositories/project_object.yml")
-#   # file_content = YAML.load_file("project_object.yml")
-#   puts "Xpath is #{file_content['google_button_search']}"
-# # end
+require 'yaml'
+
+file_content = YAML.load_file("./features/step_definitions/repositories/project_object.yml")
+# a = file_content.find {|x| x.key == "google_buttarch" }
+file_content.collect {|key,value| if key == "google_buttarch"
+                                        puts value end}

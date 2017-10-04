@@ -18,3 +18,7 @@ end
 Given /^I am on Login Page$/ do
   open_browser($hash_var['Page Address'])
 end
+
+And /^I set text on "(.*?)" with "(.*?)"$/ do |object, text|
+  execute_set_text(object, text)
+end

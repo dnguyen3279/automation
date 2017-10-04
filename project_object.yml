@@ -1,3 +1,2 @@
 google_button_search: .//*[@id='tsf']/div[2]/div[3]/center/input[1]
-google_search_textbox: .//*[@id='lst-ib']
-
+button_search: .//*[@id='tsf']/div[2]
